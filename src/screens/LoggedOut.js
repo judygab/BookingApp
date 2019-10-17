@@ -10,6 +10,7 @@ import {
   StatusBar,
   Image,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 import {
   Header,
@@ -20,6 +21,13 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 export default class LoggedOut extends Component{
+  onFacebookPress() {
+    alert('fb button pressed');
+  }
+
+  onCreateAccountPress() {
+    alert('account button pressed');
+  }
   render() {
     return (
       <View style={styles.wrapper}>
@@ -31,6 +39,17 @@ export default class LoggedOut extends Component{
           <Text style={styles.welcomeText}>Welcome to </Text>
           <RoundedButton
             text="Continue with Facebook"
+            textColor={colors.green01}
+            background={colors.white}
+            icon={<Icon name ="facebook" size={20} style={styles.facebookButtonIcon} /> }
+            handleOnPress={this.onFacebookPress}
+          />
+          <RoundedButton
+            text="Create Account"
+            textColor={colors.white}
+            background={colors.white}
+            icon={<Icon name ="facebook" size={20} style={styles.facebookButtonIcon} /> }
+            handleOnPress={this.onCreateAccountPress}
           />
         </View>
       </View>
@@ -61,7 +80,13 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontWeight: '300',
     marginBottom: 40,
-  }
+  },
+  facebookButtonIcon: {
+    color: colors.green01,
+    position: 'relative',
+    left: 20,
+    zindex: 8,
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
