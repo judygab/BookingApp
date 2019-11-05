@@ -25,10 +25,11 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import LoggedOut from './src/screens/LoggedOut';
+import LogIn from './src/screens/LogIn';
 
 const App: () => React$Node = () => {
   return (
-     <LoggedOut />
+     <LogIn />
   );
 };
 
