@@ -19,7 +19,8 @@ export default class LogIn extends Component {
   render() {
     return (
       <KeyboardAvoidingView
-        style={styles.wrapper}
+        style={styles.wrapper
+        behavior="padding"
         >
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
